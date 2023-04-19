@@ -251,8 +251,8 @@
   <div class="container is-max-desktop">
     <h3 class="title is-3">Comparison with other methods</h3>
     <div class="content has-text-justified">
+      <p> StyleLipSync can generate lip-sync video with highly accurate sync quality. Here, we exhibit comparison results (zero-shot) of reconstruction (Voxceleb2 test) and Cross-identity (HDTF). </p>
     </div>
-
     <div class="content has-text-centered">
       <video id="replay-video"
              controls
@@ -263,7 +263,7 @@
                 type="video/mp4">
       </video>
       <p>
-        Reconstruction results on Voxceleb2
+        Video 1. Reconstruction results on Voxceleb2
       </p>
 
 
@@ -281,7 +281,7 @@
                   type="video/mp4">
         </video>
         <p>
-          Cross-identity result on HDTF
+          Video 2. Cross-identity result on HDTF
         </p>
     </div>
   </div>
@@ -294,8 +294,9 @@
     <h3 class="title is-3"> Ablation Studies </h3>
 
     <h4 class="title is-4"> Pose-aware Masking </h4>
-
-    <div class="content has-text-justified">
+    <p> We propose pose-aware masking by utilizing a 3D parametric facial model, which helps the model be aware of pose information without external pose encoding.
+    </p>
+      <div class="content has-text-justified">
       </div>
     <div class="content has-text-centered">
       <video id="replay-video"
@@ -306,12 +307,15 @@
         <source src="./static/videos/masking.mp4"
                 type="video/mp4">
       </video>
-
+      Video 3. Example of pose-aware masking
     </div>
 
 
     <h4 class="title is-4"> Architectural Studies </h4>
     <div class="content has-text-justified">
+      StyleLipSync uses Moving-average based Latent Smoothing (MaLS) and Style-aware Mask Fusion (SaMF).
+      MaLS enhances the temporal consistency by learning the smooth local transition of the video trajectory lying in the style latent space.
+      SaMF helps the model attend to the masked region the using the style-modulated convolution that inherits the temporal consistency through the MaLS.
       </div>
     <div class="content has-text-centered">
       <video id="replay-video"
@@ -322,7 +326,7 @@
         <source src="./static/videos/fig6row1_ablation_zeroshot.mp4"
                 type="video/mp4">
       </video>
-
+      <p> Video 4. Ablation study (1)  </p>
     </div>
 
       <div class="content has-text-justified">
@@ -336,9 +340,7 @@
           <source src="./static/videos/fig6row2_ablation_zeroshot.mp4"
                   type="video/mp4">
         </video>
-        <p>
-          
-        </p>
+        <p> Video 5. Ablation study (2)  </p>
     </div>
   </div>
 </div>
@@ -347,38 +349,40 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h3 class="title is-3">Zero-shot vs Adaptation</h3>
-    <div class="columns is-centered">
-
+    <div class="content has-text-justified">
+    <p>
+      We additionally propose a few-shot single-person adaptation method, which requires only a few seconds of target-person video.
+      While preserving the lip-sync accuracy of the zero-shot model, it can enhance the person's specific visual information, such as the shape of lips and teeth.
+    </p>
+    </div>
+    <div class="content has-text-centered">
+    <!-- <div class="content has-text-justified">
+    </div> -->
+    <div class="columns is-centered">  
       <div class="column">
-        <p>
-          
-        </p>
-      
         <div class="columns is-centered">
           <div class="column content">
             <video id="zero_vs_adap_1" controls playsinline height="100%">
               <source src="./static/videos/fig7a2_zero-shot_vs_adap.mp4"
                       type="video/mp4">
             </video>
+            <p> Video 6. Zero-shot vs Adaptation (1)</p>
           </div>
         </div>
       </div>
 
       <div class="column">
-        <p>
-
-        </p>
-      
         <div class="content">
           <video id="zero_vs_adap_1" controls playsinline height="100%">
             <source src="./static/videos/fig7a1_zero-shot_vs_adap.mp4"
                     type="video/mp4">
           </video>
+          <p> Video 7. Zero-shot vs Adaptation (2) </p>
         </div>
       </div>
     </div>
-
   </div>
+</div>
 </section>
 
 
