@@ -73,19 +73,23 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://github.com/TaekyungKi"></sup>Taekyung Ki</a><sup>1,<span>&#8224</span></sup>,</span>
+              <a href="https://github.com/TaekyungKi"></sup>Taekyung Ki</a><sup>1,*</sup>,</span>
 
               <span class="author-block">
-              <a href="https://kevinmin95.github.io">Dongchan Min</a><sup>2,<span>&#8224</span></sup></span>
+              <a href="https://kevinmin95.github.io">Dongchan Min</a><sup>2,*</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>AITRICS,</span>
             <span class="author-block"><sup>2</sup>Graduate School of AI, KAIST</span>
           </div>
-          <div class="is-size-5 publication-authors">
-          <span class="author-block"><sup><span>&#8224</span>Equal Contribution</span>
+          <div class="is-size-6 publication-authors">
+          <span class="author-block"><sup><span>*</span></sup>Equal Contribution</span>
           </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> ICCV 2023</span>
+            </div>
+  
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -109,7 +113,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -117,7 +121,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/TaekyungKi/StyleLipSync"
@@ -125,7 +129,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Comming Soon)</span>
                   </a>
               </span>
             </div>
@@ -217,7 +221,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Abstract</h2>  
         <div class="content has-text-justified">
           <p>
             In this paper, we present StyleLipSync, a style-based personalized lip-sync video generative model that can generate identity-agnostic lip-synchronizing video from arbitrary audio.
@@ -227,11 +231,16 @@
             Extensive experiments demonstrate that our model can generate accurate lip-sync videos even with the zero-shot setting and enhance characteristics of an unseen face using a few seconds of target video through the proposed adaptation method.
           </p>
           </div>
+          <img src="./static/images/overview.png"
+          style="display: block; margin: 0 auto;" 
+          width="100%"/>
+          <p><b>Figure 1.</b>Overview of StyleLipSync</p>
       </div>
     </div>
     </div>
     <!--/ Abstract. -->
 </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -299,7 +308,7 @@
 
     <h4 class="title is-4"> Architectural Studies </h4>
     <div class="content has-text-justified">
-      <b>StyleLipSync</b> uses <b>M</b>oving-<b>a</b>verage based <b>L</b>atent <b>S</b>moothing (<b>MaLS</b>) and <b>S</b>tyle-<b>a</b>ware <b>M</b>asked <b>F</b>usion (<b>SaMF</b>).
+      <b>StyleLipSync</b> contains <b>M</b>oving-<b>a</b>verage based <b>L</b>atent <b>S</b>moothing (<b>MaLS</b>) and <b>S</b>tyle-<b>a</b>ware <b>M</b>asked <b>F</b>usion (<b>SaMF</b>).
       <b>MaLS</b> enhances the temporal consistency by learning the smooth local transition of the video trajectory lying in the style latent space.
       <b>SaMF</b> helps the model attend to the masked region the using the style-modulated convolution that inherits the temporal consistency through the MaLS.
       </div>
@@ -337,7 +346,7 @@
     <h3 class="title is-3">Zero-shot vs Adaptation</h3>
     <div class="content has-text-justified">
     <p>
-      We additionally propose <b> a few-shot single-person adaptation method </b>, which requires only a few seconds of target-person video.
+      We additionally propose <b> a few-shot single-person adaptation method</b>, which requires only a few seconds of target-person video.
       While preserving the lip-sync accuracy of the zero-shot model, it can enhance the person's specific visual information, such as the shape of lips and teeth.
     </p>
     </div>
